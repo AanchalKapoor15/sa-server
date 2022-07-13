@@ -5,19 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped<IUserService, UserService>();
 
-//builder.Services.AddCors(options =>
-//{
-//    options.AddDefaultPolicy(
-//        policy =>
-//        {
-//            policy
-//                .WithOrigins("http://localhost:3000")
-//                .WithMethods("GET, POST, DELETE, PATCH, OPTIONS")
-//                .AllowAnyMethod();
-//                //.AllowAnyHeader();
-//            //policy.WithMethods("GET, POST, DELETE, PATCH, OPTIONS");
-//        });
-//});
 builder.Services.AddCors();
 
 builder.Services.AddControllers();
