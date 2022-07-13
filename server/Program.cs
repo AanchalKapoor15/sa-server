@@ -37,7 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 app.UseCors(builder => {
-    builder.AllowAnyOrigin();
+    builder.WithOrigins("http://localhost:3000");
     builder.AllowAnyHeader();
     builder.AllowAnyMethod();
 });
